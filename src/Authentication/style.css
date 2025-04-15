@@ -1,0 +1,16 @@
+.reg-input{
+    background-color: #d7dee6;
+    border-radius: 5px;
+    width: 110%;
+    
+}
+.reg-input:hover{
+    background-color: #bcbec0;
+    text-decoration:none
+}
+.reg-input:focus{
+    outline: none;
+}
+.reg-label{
+    color:#202122;
+}
