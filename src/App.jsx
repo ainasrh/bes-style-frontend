@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Login } from "./Authentication/Login";
 import Products from "./Store/Products";
 import StoreNav from "./Store/StoreNav";
-import Home from "./store/Home/";
+import Home from "./Store/Home";
 import ProductCard from "./Store/ProductCard";
 import ViewProduct from "./Store/ViewProduct";
 import Cart from "./Checkout files/Cart";
