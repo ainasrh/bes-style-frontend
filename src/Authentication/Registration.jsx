@@ -4,6 +4,7 @@ import './style.css'
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import URL from "../../config";
 
 export function Registration() {
   const navigate=useNavigate()
@@ -24,7 +25,7 @@ export function Registration() {
     const formData= new FormData(e.target); 
     const regdata=Object.fromEntries(formData.entries());
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/reg/", regdata);
+      const response = await axios.post(`${URL}/reg/`, regdata);
       navigate('/login')
       toast.success(response.data.message);
     } catch (error) {

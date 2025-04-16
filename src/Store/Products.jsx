@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext} from "react";
 import ProductCard from "./ProductCard";
 import { StoreContext } from "../Context/Store";
 import { decodeAndCorrectImageUrl } from "../utils/decodeAndCorrectImageUrl";
+import { useEffect } from "react";
 
 function Products() {
   const { products, categoryProducts, selectedCategory, setproducts,setCategoryProducts,setSelectedCategory } = useContext(StoreContext);
@@ -12,6 +13,13 @@ function Products() {
     setCategoryProducts([]);
     setSelectedCategory(null);
   };
+  useEffect(() => {
+    products.forEach((product) => {
+      const correctedUrl = decodeAndCorrectImageUrl(product.image_url);
+      console.log("Original URL:", product.image_url);
+      console.log("Corrected URL:", correctedUrl);
+    });
+  }, [selectedCategory, categoryProducts, products]);
   
 
   return (
