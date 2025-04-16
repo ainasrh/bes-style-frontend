@@ -10,7 +10,7 @@ function Home() {
         <div className="relative w-screen h-screen">
           {/* main background shoe image */}
           <img
-            src="images/jordan.jpg"
+            src="/images/jordan.jpg"
             alt=""
             className="w-full h-full object-cover"
           />
@@ -67,9 +67,9 @@ function Home() {
             </h2>
 
             <div className="flex justify-center gap-30 items-center m-20">
-              <Card name={"ADIDAS"} image={"images/adidas.png"} />
-              <Card name={"NIKE"} image={"images/NIKE.jpeg"} />
-              <Card name={"PUMA"} image={"images/PUMA.jpeg"} />
+              <Card name={"ADIDAS"} image={"/images/adidas.png"} />
+              <Card name={"NIKE"} image={"/images/NIKE.jpeg"} />
+              <Card name={"PUMA"} image={"/images/PUMA.jpeg"} />
             </div>
           </div>
         </div>
